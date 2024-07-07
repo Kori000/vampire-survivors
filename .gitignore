@@ -1,0 +1,100 @@
+# 忽略所有的库
+[Ll]ibrary/
+# 忽略所有的临时文件
+[Tt]emp/
+# 忽略所有的对象文件
+[Oo]bj/
+# 忽略构建文件夹
+[Bb]uild/
+# 忽略缓存文件夹
+[Cc]ache/
+# 忽略用户特定的设置
+UserSettings/
+
+# 忽略 VS Code 的设置
+.vscode/
+
+# 忽略 Rider 的设置
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.pidb
+*.user
+*.userprefs
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# 忽略Unity自动生成的meta文件
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# 忽略所有的 Unity 自定义设置
+# 忽略所有的包管理器下载的包
+Packages/manifest.json.meta
+Packages/packages-lock.json.meta
+
+# 忽略所有的用户特定的设置和本地项目设置
+# 可以根据需要包括在版本控制中
+# ProjectSettings/AssetDatabase* 
+# ProjectSettings/AudioManager* 
+# ProjectSettings/ClusterInputManager* 
+# ProjectSettings/DynamicsManager* 
+# ProjectSettings/EditorBuildSettings* 
+# ProjectSettings/EditorSettings* 
+# ProjectSettings/GraphicsSettings* 
+# ProjectSettings/InputManager* 
+# ProjectSettings/NavMeshAreas* 
+# ProjectSettings/NetworkManager* 
+# ProjectSettings/Physics2DSettings* 
+# ProjectSettings/ProjectSettings* 
+# ProjectSettings/QualitySettings* 
+# ProjectSettings/TagManager* 
+# ProjectSettings/TimeManager* 
+# ProjectSettings/UnityConnectSettings*
+
+# 忽略所有的游戏日志文件
+*.log
+
+# 忽略所有的 crash 日志文件
+crashlytics/
+
+# 忽略所有的自动化测试文件
+Assets/AutomationTestLogs/
+
+# 忽略所有的播放模式文件
+PlayModePersist.xml
+
+# 忽略所有的本地资产数据库文件
+AssetDatabase/
+
+# 忽略所有的偏好设置文件
+Library/
+
+# 忽略所有的 VSCode 工作区文件
+.vscode/
+
+# 忽略所有的 Rider 用户特定文件
+.idea/
+
+# 忽略所有的 MacOS 文件
+.DS_Store
+
+# 忽略所有的 Windows 文件
+Thumbs.db
+
+# 忽略所有的临时文件
+Temp/
+
+# 忽略所有的系统文件
+System/
+
+# 忽略所有的项目包
+Packages/
+
+# 忽略所有的日志文件
+Logs/
