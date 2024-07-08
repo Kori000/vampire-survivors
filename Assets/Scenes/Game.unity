@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &247341515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8203019467074045043, guid: d58f84c2e6108420b8ae297e10a27115, type: 3}
+  m_PrefabInstance: {fileID: 2070624975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +234,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1523710361}
   offset: {x: 0, y: 0, z: -10}
+--- !u!1 &815371483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815371484}
+  - component: {fileID: 815371485}
+  m_Layer: 0
+  m_Name: Knife Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &815371484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815371483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1523710361}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &815371485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815371483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf646f35f57424ecf92825bc4a6e96a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 9124932753329544194, guid: d3e98dc8debf540589fc65553ced0060, type: 3}
+  damage: 0
+  speed: 10
+  cooldownDuration: 2
+  pierce: 0
 --- !u!1 &1523710357
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,10 +438,11 @@ Transform:
   m_GameObject: {fileID: 1523710357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 815371484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1523710362
@@ -406,6 +461,7 @@ MonoBehaviour:
   lastHorizontalVector: 0
   lastVerticalVector: 0
   moveDir: {x: 0, y: 0}
+  lastMovedVector: {x: 0, y: 0}
 --- !u!114 &1523710363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +534,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   currentChunk: {fileID: 0}
+  spawnedChunks:
+  - {fileID: 247341515}
+  maxOpDist: 50
+  optimizerCooldownDur: 2
 --- !u!4 &1720909008
 Transform:
   m_ObjectHideFlags: 0
@@ -511,7 +571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7025366806281414616, guid: d58f84c2e6108420b8ae297e10a27115, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7025366806281414616, guid: d58f84c2e6108420b8ae297e10a27115, type: 3}
       propertyPath: m_LocalRotation.w

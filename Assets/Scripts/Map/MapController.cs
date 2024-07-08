@@ -7,7 +7,7 @@ public class MapController : MonoBehaviour // 定义一个名为 MapController �
     public List<GameObject> terrainChunks; // 表示地形块的列表 - Prefabs/Chunks 中预定义好的地图块, 其中有 八个方向的 GameObject 和 一堆 Props (石头之类的)
     public GameObject player; // 定义一个公有变量 player，表示玩家对象
     public float checkerRadius; // 定义一个公有变量 checkerRadius，表示检测半径
-    Vector2 noTerrainPosition; // 定义一个私有变量 noTerrainPosition，表示没有地形的位置
+    Vector3 noTerrainPosition; // 定义一个私有变量 noTerrainPosition，表示没有地形的位置
     public LayerMask terrainMask; // 定义一个公有变量 terrainMask，表示地形层的遮罩
 
     PlayerMovement pm; // 定义一个私有变量 pm，表示玩家移动的脚本
@@ -121,16 +121,16 @@ public class MapController : MonoBehaviour // 定义一个名为 MapController �
 
     void ChunkOptimizer() // 优化地形块，移除远离玩家的地形块
     {
-        // optimizerCooldown -= Time.deltaTime; // 减少优化器的冷却时间
+        optimizerCooldown -= Time.deltaTime; // 减少优化器的冷却时间
 
-        // if (optimizerCooldown <= 0f) // 如果冷却时间小于等于 0
-        // {
-        //     optimizerCooldown = optimizerCooldownDur; // 重置冷却时间
-        // }
-        // else
-        // {
-        //     return; // 否则返回
-        // }
+        if (optimizerCooldown <= 0f) // 如果冷却时间小于等于 0
+        {
+            optimizerCooldown = optimizerCooldownDur; // 重置冷却时间
+        }
+        else
+        {
+            return; // 否则返回
+        }
 
         foreach (GameObject chunk in spawnedChunks) // 遍历所有已生成的地形块
         {
